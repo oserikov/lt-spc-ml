@@ -16,33 +16,7 @@ output_model_filename = "xgb.model"
 
 
 if __name__ == '__main__':
-    #folders = preprocess(input_lt_data, all_features_filename, public_features_filename, bad_records_filename)
-    folders = [
-        #'/ssd_data/lt/features_splitted/FR_SPELLING_RULE',
-        #'/ssd_data/lt/features_splitted/GERMAN_SPELLER_RULE',
-        #'/ssd_data/lt/features_splitted/HUNSPELL_NO_SUGGEST_RULE',
-        '/ssd_data/lt/features_splitted/HUNSPELL_RULE',
-        '/ssd_data/lt/features_splitted/MORFOLOGIK_RULE_AST',
-        '/ssd_data/lt/features_splitted/MORFOLOGIK_RULE_BE_BY',
-        '/ssd_data/lt/features_splitted/MORFOLOGIK_RULE_BR_FR',
-        '/ssd_data/lt/features_splitted/MORFOLOGIK_RULE_CA_ES',
-        '/ssd_data/lt/features_splitted/MORFOLOGIK_RULE_EL_GR',
-        '/ssd_data/lt/features_splitted/MORFOLOGIK_RULE_EN_AU',
-        '/ssd_data/lt/features_splitted/MORFOLOGIK_RULE_EN_CA',
-        '/ssd_data/lt/features_splitted/MORFOLOGIK_RULE_EN_GB',
-        '/ssd_data/lt/features_splitted/MORFOLOGIK_RULE_EN_NZ',
-        '/ssd_data/lt/features_splitted/MORFOLOGIK_RULE_EN_ZA',
-        '/ssd_data/lt/features_splitted/MORFOLOGIK_RULE_IT_IT',
-        '/ssd_data/lt/features_splitted/MORFOLOGIK_RULE_NL_NL',
-        '/ssd_data/lt/features_splitted/MORFOLOGIK_RULE_PL_PL',
-        '/ssd_data/lt/features_splitted/MORFOLOGIK_RULE_RO_RO',
-        '/ssd_data/lt/features_splitted/MORFOLOGIK_RULE_RU_RU',
-        '/ssd_data/lt/features_splitted/MORFOLOGIK_RULE_SK_SK',
-        '/ssd_data/lt/features_splitted/MORFOLOGIK_RULE_SL_SI',
-        '/ssd_data/lt/features_splitted/MORFOLOGIK_RULE_SR_EKAVIAN',
-        '/ssd_data/lt/features_splitted/MORFOLOGIK_RULE_TL',
-        '/ssd_data/lt/features_splitted/SWISS_GERMAN_SPELLER_RULE'
-    ]
+    folders = preprocess(input_lt_data, all_features_filename, public_features_filename, bad_records_filename)
     for f in folders:
         train_data_full_filename = os.path.join(f, train_data_filename)
         test_data_full_filename = os.path.join(f, test_data_filename)
